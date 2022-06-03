@@ -1,1 +1,20 @@
-<p>main-page works!</p>
+
+
+<div *ngIf="minMaxDates">
+  <mat-chip-list aria-label="Fish selection">
+    <mat-chip>You have events from the {{minMaxDates.minimum | date: 'dd/MM/yyyy'}} to the {{minMaxDates.maximum | date: 'dd/MM/yyyy'}}</mat-chip>
+  </mat-chip-list>
+</div>
+
+<div style="margin-top: 30px">
+  <h1>Welcome to our event website</h1>
+  <p>You'll can find here differents events related to what you like !</p>
+</div>
+
+
+<mat-grid-list cols="2" rowHeight="2:1" style="margin-top: 30px">
+  <mat-grid-tile><img src="https://unsplash.com/photos/hcrfLqvquTg/download?ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjU0MjcyNDQz&force=true&w=1920"></mat-grid-tile>
+  <mat-grid-tile><img src="https://unsplash.com/photos/93dzWVtA520/download?ixid=MnwxMjA3fDB8MXxjb2xsZWN0aW9ufDR8MjE1NDE2fHx8fHwyfHwxNjU0MjY4ODE1&force=true&w=1920"></mat-grid-tile>
+  <mat-grid-tile><img src="https://unsplash.com/photos/8H_5BDD44RM/download?ixid=MnwxMjA3fDB8MXxjb2xsZWN0aW9ufDJ8MjE1NDE2fHx8fHwyfHwxNjU0MjY4ODE1&force=true&w=1920"></mat-grid-tile>
+  <mat-grid-tile><img src="https://unsplash.com/photos/p2sRX5ww7DE/download?ixid=MnwxMjA3fDB8MXxjb2xsZWN0aW9ufDN8MjE1NDE2fHx8fHwyfHwxNjU0MjY4ODE1&force=true&w=1920"></mat-grid-tile>
+</mat-grid-list>

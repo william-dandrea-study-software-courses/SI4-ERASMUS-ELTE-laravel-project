@@ -69,4 +69,11 @@ class EventController extends Controller
         $event->delete();
         return response()->json(null, 204);
     }
+
+    public function minimumAndMaximumDate() {
+        $minimum = Event::all('date')->min('date');
+        $maximum = Event::all('date')->max('date');
+
+        return response()->json(['minimum' => $minimum, 'maximum' => $maximum], 200);
+    }
 }

@@ -18,4 +18,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::resource('/event', "\App\Http\Controllers\EventController")->except(['create', 'edit']);;
+Route::resource('/event', "\App\Http\Controllers\EventController")->except(['create', 'edit']);
+
+Route::get('/limits-date-event', [\App\Http\Controllers\EventController::class, 'minimumAndMaximumDate']);

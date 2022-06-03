@@ -1,0 +1,18 @@
+
+
+<mat-card class="full-height">
+  <mat-card-subtitle>{{date | date: 'dd/MM/yyyy'}}</mat-card-subtitle>
+  <mat-card-title>{{title}}</mat-card-title>
+  <mat-card-content>
+    <p>{{ note }}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-content>
+    <p>{{location}}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-stroked-button color="primary" (click)="handleEdit()">Edit</button>
+    <button mat-raised-button color="warn" (click)="handleDelete()">Delete</button>
+  </mat-card-actions>
+</mat-card>

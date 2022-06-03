@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-menu-bar',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  public handleHome(): void {
+    this.router.navigate(['/']);
   }
 
+  public handleAbout(): void {
+    this.router.navigate(['/about'])
+  }
+
+  public handleEvent(): void {
+    this.router.navigate(['/events'])
+  }
 }

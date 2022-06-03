@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { MenuBarComponent } from './shared/components/layout/menu-bar/menu-bar.component';
 import { PageNotFoundComponent } from './feature/page-not-found/page-not-found.component';
 import {HttpClientModule} from "@angular/common/http";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
