@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {BehaviorSubject, Observable} from "rxjs";
+import {BehaviorSubject, Observable, Subscription} from "rxjs";
 import {EventModel} from "../model/event.model";
 import {MinMaxModel} from "../model/minmax.model";
 
@@ -41,8 +41,8 @@ export class EventService {
     this.addEvent(event).subscribe(value => this.setAllEvents());
   }
 
-  public updateAndRefresh(id: number, event: EventModel) {
-    this.updateEvent(id, event).subscribe(value => this.setAllEvents());
+  public updateAndRefresh(id: number, event: EventModel): Subscription {
+    return this.updateEvent(id, event).subscribe(value => this.setAllEvents());
   }
 
   public getEvent(id: number): Observable<EventModel> {

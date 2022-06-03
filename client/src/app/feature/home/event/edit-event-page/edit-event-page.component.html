@@ -1,1 +1,8 @@
-<p>edit-event-page works!</p>
+
+
+
+<div *ngIf="event">
+  <app-event-form [event]="event" (save)="submit($event)" class="page-card-edit center-middle-page"></app-event-form>
+</div>
+
+

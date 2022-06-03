@@ -18,7 +18,7 @@ class EventFactory extends Factory
     {
         return [
             'title'     => $this->faker->jobTitle(),
-            'location'  => $this->faker->address(),
+            'location'  => $this->faker->city(),
             'note'      => $this->faker->realText($maxNbChars = 200, $indexSize = 2),
             'date'      => $this->faker->iso8601($max = 'now'),
         ];

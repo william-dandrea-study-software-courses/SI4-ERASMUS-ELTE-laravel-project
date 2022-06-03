@@ -3,9 +3,9 @@
 
 <div *ngIf="allEvents">
 
-  <mat-grid-list cols="3">
+  <mat-grid-list cols="3" >
     <mat-grid-tile *ngFor="let event of allEvents">
-      <app-event-card class="event-card" [id]="event.id" [date]="event.date" [title]="event.title" [location]="event.location" [note]="event.note"></app-event-card>
+      <app-event-card class="event-card full-width" [id]="event.id" [date]="event.date" [title]="event.title" [location]="event.location" [note]="event.note"></app-event-card>
     </mat-grid-tile>
   </mat-grid-list>
 

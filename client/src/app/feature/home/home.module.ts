@@ -15,6 +15,11 @@ import {MatProgressBarModule} from "@angular/material/progress-bar";
 import {MatButtonModule} from "@angular/material/button";
 import {MatGridListModule} from "@angular/material/grid-list";
 import {MatChipsModule} from "@angular/material/chips";
+import {ReactiveFormsModule} from "@angular/forms";
+import {MatFormFieldModule} from "@angular/material/form-field";
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import {MatInputModule} from "@angular/material/input";
+import { EventFormComponent } from './event/event-form/event-form.component';
 
 
 
@@ -26,6 +31,7 @@ import {MatChipsModule} from "@angular/material/chips";
     AddEventPageComponent,
     EditEventPageComponent,
     EventCardComponent,
+    EventFormComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +42,11 @@ import {MatChipsModule} from "@angular/material/chips";
     MatProgressBarModule,
     MatButtonModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatInputModule
   ]
 })
 export class HomeModule { }

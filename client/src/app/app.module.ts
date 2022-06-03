@@ -7,6 +7,9 @@ import { MenuBarComponent } from './shared/components/layout/menu-bar/menu-bar.c
 import { PageNotFoundComponent } from './feature/page-not-found/page-not-found.component';
 import {HttpClientModule} from "@angular/common/http";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatIconModule} from "@angular/material/icon";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
@@ -19,6 +22,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

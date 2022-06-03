@@ -10,7 +10,8 @@ export class MenuBarComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 
   public handleHome(): void {
     this.router.navigate(['/']);

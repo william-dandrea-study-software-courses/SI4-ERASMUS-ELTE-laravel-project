@@ -1,8 +1,9 @@
 
 
 <div *ngIf="minMaxDates">
-  <mat-chip-list aria-label="Fish selection">
-    <mat-chip>You have events from the {{minMaxDates.minimum | date: 'dd/MM/yyyy'}} to the {{minMaxDates.maximum | date: 'dd/MM/yyyy'}}</mat-chip>
+  <mat-chip-list aria-label="Fish selection" >
+    <mat-chip *ngIf="minMaxDates.maximum && minMaxDates.minimum">You have events from the {{minMaxDates.minimum | date: 'dd/MM/yyyy'}} to the {{minMaxDates.maximum | date: 'dd/MM/yyyy'}}</mat-chip>
+    <mat-chip *ngIf="!minMaxDates.maximum || !minMaxDates.minimum">Any events availables</mat-chip>
   </mat-chip-list>
 </div>
 
