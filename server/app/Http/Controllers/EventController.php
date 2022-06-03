@@ -73,7 +73,8 @@ class EventController extends Controller
     public function minimumAndMaximumDate() {
         $minimum = Event::all('date')->min('date');
         $maximum = Event::all('date')->max('date');
+        $numberOfEvents = Event::all()->count();
 
-        return response()->json(['minimum' => $minimum, 'maximum' => $maximum], 200);
+        return response()->json(['minimum' => $minimum, 'maximum' => $maximum, 'total' => $numberOfEvents], 200);
     }
 }
